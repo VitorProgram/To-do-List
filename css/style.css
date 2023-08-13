@@ -4,6 +4,9 @@
     --color-3: #121212;
     --color-4: #DAFFFB;
     --color-5: #535353;
+    --color-6: #1d2a34;
+    --color-7: #007a27;
+    --color-8: #5bcd3e;
 }
 
 * {
@@ -20,6 +23,13 @@ body {
 
     display: grid;
     place-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 30px;
+    font-family: 'Barriecito', cursive, sans-serif;
 }
 
 #container-main {
@@ -70,7 +80,44 @@ ul {
     font-weight: 400;
 
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+.to-do span {
+    width: 100%;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Personalizando input de checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background: var(--color-6);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+}
+input[type="checkbox"]:after {
+    font-family: 'font Awesome 5 Free';
+    font-weight: 700;
+    content: '\f00c';
+    font-size: 16px;
+    color: #fff;
+    display: none;
+}
+input[type="checkbox"]:hover {
+    background: var(--color-7);
+}
+input[type="checkbox"]:checked {
+    background: var(--color-8);
+}
+input[type="checkbox"]:checked:after {
+    display: block;
 }
 
 .botao-remover {
@@ -78,5 +125,12 @@ ul {
     background: url('/images/bin.png');
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    padding: 8px;
+}
+
+
+#check {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
