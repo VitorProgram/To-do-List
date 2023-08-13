@@ -28,7 +28,7 @@ ou
 ## Dependências
 Fontes usadas no texto do aplicativo:
 
-- [Roboto Condensed]([https://fonts.google.com/](https://fonts.google.com/specimen/Roboto+Condensed?query=roboto+condensed)): 
+- [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed?query=roboto+condense)
 - [Barriecito](https://fonts.google.com/specimen/Barriecito?query=barriecito)
 
 
