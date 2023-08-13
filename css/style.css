@@ -1,0 +1,82 @@
+:root {
+    --color-1: #06212a;
+    --color-2: #000910;
+    --color-3: #121212;
+    --color-4: #DAFFFB;
+    --color-5: #535353;
+}
+
+* {
+    color: var(--color-4);
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--color-2);
+
+    display: grid;
+    place-content: center;
+}
+
+#container-main {
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--color-3);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#container-adicionar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#container-adicionar #input-adicionar {
+    flex: 1;
+    color: var(--color-5);
+}
+
+#input-adicionar, #botao-adicionar {
+    padding: 6px;
+    background: var(--color-2);
+    border: none;
+    border-radius: 4px;
+}
+
+ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.to-do {
+    margin: 10px 0 0 0;
+    padding: 8px;
+    background: var(--color-2);
+    list-style: none; 
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-remover {
+    border: none;
+    background: url('/images/bin.png');
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
