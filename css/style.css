@@ -1,4 +1,6 @@
+/* Estilos globais */
 :root {
+    /* Cores definidas como variáveis */
     --color-1: #06212a;
     --color-2: #000910;
     --color-3: #121212;
@@ -9,6 +11,7 @@
     --color-8: #5bcd3e;
 }
 
+/* Estilos globais aplicados a todos os elementos */
 * {
     color: var(--color-4);
     padding: 0;
@@ -17,21 +20,25 @@
     box-sizing: border-box;
 }
 
+/* Estilos do corpo da página */
 body {
     height: 100vh;
     background: var(--color-2);
 
+    /* Centralizar conteúdo verticalmente e horizontalmente */
     display: grid;
     place-content: center;
     text-align: center;
 }
 
+/* Estilos para o título principal */
 h1 {
     font-size: 70px;
     margin-bottom: 30px;
     font-family: 'Barriecito', cursive, sans-serif;
 }
 
+/* Estilos para o container principal */
 #container-main {
     padding: 20px;
     border-radius: 8px;
@@ -44,6 +51,7 @@ h1 {
     gap: 15px;
 }
 
+/* Estilos para o container de adicionar tarefas */
 #container-adicionar {
     display: flex;
     justify-content: space-between;
@@ -52,24 +60,32 @@ h1 {
     width: 100%;
 }
 
+/* Estilos para o input de adicionar tarefas */
 #container-adicionar #input-adicionar {
     flex: 1;
     color: var(--color-5);
 }
+#input-adicionar:focus {
+    border: none;
+    outline: 0;
+}
 
+/* Estilos para o input e botão de adicionar tarefas */
 #input-adicionar, #botao-adicionar {
-    padding: 6px;
+    padding: 6px 8px;
     background: var(--color-2);
     border: none;
     border-radius: 4px;
 }
 
+/* Estilos para a lista de tarefas */
 ul {
     display: none;
     flex-direction: column;
     width: 100%;
 }
 
+/* Estilos para cada item de tarefa (to-do) */
 .to-do {
     margin: 10px 0 0 0;
     padding: 8px;
@@ -83,13 +99,15 @@ ul {
     align-items: center;
     justify-content: center;
 }
+
+/* Estilos para o texto dentro do item de tarefa */
 .to-do span {
     width: 100%;
     margin-left: 20px;
     text-align: left;
 }
 
-/* Personalizando input de checkbox */
+/* Estilos personalizados para checkboxes */
 input[type="checkbox"] {
     appearance: none;
     height: 24px;
@@ -102,6 +120,8 @@ input[type="checkbox"] {
     justify-content: center;
     transition: background .2s;
 }
+
+/* Estilos para o ícone de marcação de tarefa completa */
 input[type="checkbox"]:after {
     font-family: 'font Awesome 5 Free';
     font-weight: 700;
@@ -110,16 +130,22 @@ input[type="checkbox"]:after {
     color: #fff;
     display: none;
 }
+
+/* Estilos para a interação de hover e checked nos checkboxes */
 input[type="checkbox"]:hover {
     background: var(--color-7);
 }
+
 input[type="checkbox"]:checked {
     background: var(--color-8);
 }
+
+/* Exibir o ícone de marcação de tarefa completa quando a checkbox estiver marcada */
 input[type="checkbox"]:checked:after {
     display: block;
 }
 
+/* Estilos para o botão de remover tarefa */
 .botao-remover {
     border: none;
     background: url('/images/bin.png');
@@ -128,7 +154,7 @@ input[type="checkbox"]:checked:after {
     padding: 8px;
 }
 
-
+/* Estilos para a seção de marcação de tarefa e botão de remover */
 #check {
     display: flex;
     align-items: center;

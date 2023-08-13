@@ -1,9 +1,10 @@
+// Elementos HTML relevantes
 const inputToDo = document.getElementById('input-adicionar');
 const botaoAdd = document.getElementById('botao-adicionar');
 const ul = document.getElementById('list');
 let indexToDo = 0;
 
-// Função para atualizar o Local Storage com os to-dos e checkboxes
+// Atualiza o Local Storage com os to-dos e checkboxes
 function updateLocalStorage() {
     const todos = [];
     const lis = ul.querySelectorAll('.to-do');
@@ -20,7 +21,7 @@ function updateLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-// Função para carregar os to-dos do Local Storage
+// Carrega os to-dos do Local Storage
 function loadTodos() {
     const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
@@ -41,7 +42,7 @@ function loadTodos() {
         buttonRemove.id = `removeBtn-${todo.id}`;
         buttonRemove.classList.add('botao-remover');
 
-        // Funcionalidade de remover linha
+        // Funcionalidade de remover tarefa
         buttonRemove.addEventListener('click', () => {
             newLi.remove();
             updateLocalStorage();
@@ -58,15 +59,16 @@ function loadTodos() {
     });
 }
 
-// Carregar os to-dos ao carregar a página
+// Carrega os to-dos ao carregar a página
 loadTodos();
 
+// Evento de clique para adicionar tarefa
 botaoAdd.addEventListener('click', () => {
     if (inputToDo.value != '') {
         // Aumenta +1 ao valor do indexToDo
         indexToDo++;
 
-        // Nova linha/to-do
+        // Cria um novo elemento de tarefa
         const newLi = document.createElement('li');
         newLi.classList.add('to-do');
         newLi.id = `todo-${indexToDo}`;
@@ -82,7 +84,7 @@ botaoAdd.addEventListener('click', () => {
         buttonRemove.id = `removeBtn-${indexToDo}`;
         buttonRemove.classList.add('botao-remover');
 
-        // Funcionalidade de remover linha
+        // Funcionalidade de remover tarefa
         buttonRemove.addEventListener('click', () => {
             newLi.remove();
             updateLocalStorage();
@@ -101,11 +103,11 @@ botaoAdd.addEventListener('click', () => {
 
         updateLocalStorage();
     } else if (inputToDo.value === '') {
-        alert('Adicione algo a lista.')
+        alert('Adicione algo à lista.');
     }
-}); 
+});
 
-// Adicionar evento de mudança para os checkboxes
+// Adiciona um evento de mudança para as checkboxes
 ul.addEventListener('change', (event) => {
     const checkbox = event.target;
     if (checkbox.type === 'checkbox') {
