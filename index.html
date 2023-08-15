@@ -6,6 +6,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 
     <!-- Javascript -->
     <script src="js/script.js" defer></script>
@@ -23,19 +24,21 @@
 </head>
 <body>
     <!-- To-do list -->
-    <h1>
-        Code Tasks
-    </h1>
-    <div id="container-main">
+    <div>
+        <h1>
+            Code Tasks
+        </h1>
+        <div id="container-main">
 
-        <!-- Local onde irá ter o input do novo to-do e o botão com evento para adicionar -->
-        <div id="container-adicionar">
-            <input id="input-adicionar" type="text" placeholder="Adicione uma nova tarefa">
-            <button id="botao-adicionar">+</button>
+            <!-- Local onde irá ter o input do novo to-do e o botão com evento para adicionar -->
+            <div id="container-adicionar">
+                <input id="input-adicionar" type="text" placeholder="Adicione uma nova tarefa">
+                <button id="botao-adicionar">+</button>
+            </div>
+
+            <!-- Lista onde irá ficar os to-dos -->
+            <ul id="list"></ul>
         </div>
-
-        <!-- Lista onde irá ficar os to-dos -->
-        <ul id="list"></ul>
     </div>
 </body>
 </html>

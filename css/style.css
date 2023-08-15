@@ -26,9 +26,13 @@ body {
     background: var(--color-2);
 
     /* Centralizar conteúdo verticalmente e horizontalmente */
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+
+    overflow: hidden;
 }
 
 /* Estilos para o título principal */
@@ -43,7 +47,8 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     background: var(--color-3);
-    width: 400px;
+    max-width: 400px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,6 +88,9 @@ ul {
     display: none;
     flex-direction: column;
     width: 100%;
+    
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 /* Estilos para cada item de tarefa (to-do) */
